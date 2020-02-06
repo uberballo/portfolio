@@ -1,13 +1,11 @@
 import axios from 'axios';
 const baseUrl = '/api/login';
 
-const getCode = async ({ username, password }) => {
+const logIn = async (username, password) => {
   try {
     const res = await axios.post(baseUrl, {
-      params: {
-        username: username,
-        password: password
-      }
+      username: username,
+      password: password
     });
     return res.data;
   } catch (error) {
@@ -15,4 +13,4 @@ const getCode = async ({ username, password }) => {
   }
 };
 
-export default { getCode };
+export default { logIn };

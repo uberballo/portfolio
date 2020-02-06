@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import LoginForm from '../presentational/LoginForm';
+import React from 'react'
 
-const AdminContainer = () => {
-  //Temporary. Fix logging in
-  const [loggedIn, setLoggedIn] = useState(false);
+const AdminContainer = () =>{
+    return(
+        <div>
+            <p>tere admin</p>
+        </div>
+    )
+}
 
-  return (
-    <div className='container mt-5'>{loggedIn ? null : <LoginForm />}</div>
-  );
-};
-
-export default AdminContainer;
+export default AdminContainer

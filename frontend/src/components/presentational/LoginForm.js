@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import LoginService from '../../sevices/logInService'
 
 const useField = type => {
   const [value, setValue] = useState('')
@@ -13,13 +14,22 @@ const useField = type => {
   }
 }
 
-const LoginForm = () =>{
+
+const LoginForm = ({setLoggedIn}) =>{
     const username = useField('text')
     const password = useField('password')
+
+const handleSubmit= async (e) =>{
+  e.preventDefault()
+  const response = await LoginService.logIn(username.value, password.value)
+  setLoggedIn(response && response.loggedIn)
+}
+
+
     return (
-      <form>
+      <form onSubmit={ handleSubmit}>
         <div className='form-group'>
-          <label for='usernameInput'>Username</label>
+          <label >Username</label>
           <input
             className='form-control'
             id='usernameInput'
@@ -28,7 +38,7 @@ const LoginForm = () =>{
           />
         </div>
         <div className='form-group'>
-          <label for='passwordInput'>Password</label>
+          <label >Password</label>
           <input
             className='form-control'
             id='passwordInput'
@@ -36,7 +46,7 @@ const LoginForm = () =>{
             {...password}
           />
         </div>
-        <button type='submit' class='btn btn-primary'>
+        <button type='submit' className='btn btn-primary'>
           Submit
         </button>
       </form>
