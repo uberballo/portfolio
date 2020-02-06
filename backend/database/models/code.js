@@ -2,9 +2,9 @@
 module.exports = (sequelize, DataTypes) => {
   const Code = sequelize.define('Code', {
     title: DataTypes.STRING,
-    description: DataTypes.STRING,
     language: DataTypes.STRING,
     url: DataTypes.STRING,
+    description: DataTypes.STRING,
     code: DataTypes.STRING
   },
    {});
