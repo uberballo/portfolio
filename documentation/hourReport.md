@@ -4,5 +4,5 @@
 | :----:|:-----| :-----|
 |5.4| 4| Design application and study PostgerSql|
 |6.4| 3 | Setup basic structure and working backend|  
-|6.4| 1 | setup basic frontend|  
+|6.4| 6 | setup basic frontend, routing and UI framework|  
 
