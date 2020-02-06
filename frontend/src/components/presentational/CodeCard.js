@@ -2,7 +2,7 @@ import React from 'react';
 
 const CodeCard = ({ data }) => {
   return (
-    <div className='card text-center'>
+    <div className='card mt-4 ml-4 mr-4 text-center shadow-sm'>
       <div className='card-header'>
         <h5 className='card-title '>{data.title}</h5>
       </div>
@@ -12,7 +12,7 @@ const CodeCard = ({ data }) => {
         <p className='card-text'>{data.description}</p>
         <p className='card-text'>{data.code}</p>
       </div>
-    </div>
+</div>
   );
 };
 

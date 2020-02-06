@@ -2,3 +2,11 @@
 .card{
     width: 18rem;
 }
+
+.card-columns {
+    column-count: 5;
+  
+}
+
+.CardContainer{
+}

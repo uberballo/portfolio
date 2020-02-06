@@ -9,8 +9,8 @@ const Header = () => {
           Portfolio
         </a>
 
-          <ul class='navbar-nav mr-auto'>
-            <li class='nav-item'>
+          <ul className='navbar-nav mr-auto'>
+            <li className='nav-item'>
               <NavLink to="/about" className="nav-link" activeStyle={{fontWeight: "bold"}}>About</NavLink>  
             </li>
           </ul>
