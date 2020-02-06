@@ -1,10 +1,12 @@
 const {Router} = require('express')
-const controllers = require('../controllers')
+const codeController = require('../controllers/codeController')
+const adminController = require('../controllers/adminController')
 const router = Router()
 
 router.get('/', (req, res) => res.send('welcome'))
 
-router.post('/code',controllers.CreateCode)
-router.get('/code',controllers.GetAllCodes)
+router.post('/code',codeController.CreateCode)
+router.get('/code',codeController.GetAllCodes)
+router.post('/login',adminController.logInAdmin)
 
 module.exports = router
