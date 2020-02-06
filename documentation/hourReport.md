@@ -7,4 +7,5 @@
 |6.4| 6 | setup basic frontend, routing and UI framework|  
 |6.4| 0.5 | Login form for admin|  
 |6.4| 0.5 | Login controller for admin|  
+|6.4| 1 | Added single code view|  
 

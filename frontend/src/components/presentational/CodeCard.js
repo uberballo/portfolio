@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CodeCard = ({ data }) => {
+const CodeCard = ({ data,setCurrentCode }) => {
   return (
     <div className='card mt-4 ml-4 mr-4 text-center shadow-sm'>
       <div className='card-header'>
@@ -12,7 +12,10 @@ const CodeCard = ({ data }) => {
         <p className='card-text'>{data.description}</p>
         <p className='card-text'>{data.code}</p>
       </div>
-</div>
+      <a onClick={() => setCurrentCode(data)} className='btn btn-primary'>
+        Choose
+      </a>
+    </div>
   );
 };
 

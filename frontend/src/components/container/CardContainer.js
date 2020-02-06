@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CodeCard from '../presentational/CodeCard';
+import SingleCode from '../presentational/SingleCode';
 
 const temp = [
   {
@@ -46,17 +47,20 @@ const temp = [
 
 const CardContainer = () => {
   const [codes, setCodes] = useState(temp);
+  const [currentCode, setCurrentCode] = useState();
 
-  const cards = () => codes.map(c => <CodeCard data={c} key={c.id} />);
+  const cards = () => codes.map(c => <CodeCard data={c} setCurrentCode={setCurrentCode} key={c.id} />);
 
   console.log(codes);
   return (
-    <div className='CardContainer container'>
-      <div className='row align-items-center justify-content-center'>
-        <div className='row '>
-          {codes ? cards() : null}
+    <div className='main'>
+      {currentCode ? (
+        <SingleCode code={currentCode} />
+      ) : (
+        <div className='row align-items-center justify-content-center'>
+          <div className='row '>{codes ? cards() : null}</div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

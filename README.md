@@ -5,3 +5,12 @@ Portfolio site where you can showcase your code. Retrieves projects from Github 
 
 
 [Hour report](https://github.com/uberballo/portfolio/blob/master/documentation/hourReport.md)
+
+### TODO  
+* Secure logging in
+* Possibility to add code  
+* Fetch data from Github  
+* Ci/Cd
+* Tests
+* Hosting 
+
