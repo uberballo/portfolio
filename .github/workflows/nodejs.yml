@@ -1,4 +1,4 @@
-name: Node CI
+name: Node.js CI
 
 on: [push]
 
@@ -24,9 +24,7 @@ jobs:
         with:
           node-version: 12.x
       - run: npm ci
-        working-directory: ./portfolio
       - run: npm run test-db
-        working-directory: ./portfolio
         env:
           POSTGRES_HOST: localhost
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} 
