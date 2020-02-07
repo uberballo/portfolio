@@ -18,7 +18,15 @@ module.exports = {
         code:'console.log(1+1)',
         createdAt: new Date(),
         updatedAt: new Date()
-      }], {});
+      },{
+        projectId: 2,
+        title: 'Python koodia main', 
+        language: 'Python',
+        code:'Python def main()asd',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ], {});
   },
 
   down: (queryInterface, Sequelize) => {
