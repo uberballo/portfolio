@@ -13,7 +13,7 @@ describe('test', () => {
     const response = await api
       .get('/api/code')
       .expect('Content-Type', /application\/json/)
-      .expect(201)
+      .expect(200)
 
       const body = response.body.codes
       console.log(response.body)

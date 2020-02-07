@@ -25,6 +25,7 @@ jobs:
           node-version: 12.x
       - run: npm ci
       - run: npm run test
+        working-directory: ./backend
         env:
           POSTGRES_HOST: localhost
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} 
