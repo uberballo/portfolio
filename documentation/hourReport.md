@@ -10,4 +10,6 @@
 |6.4| 1 | Added single code view|  
 |6.4| 1 | Admin view|  
 |6.5| 1 | Added first test to backend|  
+|6.5| 2 | Github actions|  
+|6.5| 1 | Refactored the database, Project has many codes|  
 
