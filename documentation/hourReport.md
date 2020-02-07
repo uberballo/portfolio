@@ -8,4 +8,6 @@
 |6.4| 0.5 | Login form for admin|  
 |6.4| 0.5 | Login controller for admin|  
 |6.4| 1 | Added single code view|  
+|6.4| 1 | Admin view|  
+|6.5| 1 | Added first test to backend|  
 
