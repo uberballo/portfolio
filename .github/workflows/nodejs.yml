@@ -1,11 +1,12 @@
-name: Node.js CI
+name: Node CI
 
 on: [push]
 
 jobs:
-    vm-job:
+  vm-job:
     runs-on: ubuntu-latest
-   services:
+
+    services:
       postgres:
         image: postgres:10.8
         env:
@@ -13,29 +14,18 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: test_db
         ports:
-        - 5432:5432
-        # needed because the postgres container does not provide a healthcheck
+          - 5432/tcp
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build --if-present
-    - run: npm run test-db
-      env: 
-      POSTGRES_HOST: localhost
-      POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} 
-      TEST_DATABASE_URL: postgres://postgres:postgres@127.0.0.1:${{ job.services.postgres.ports[5432] }}/test_db
-    - run: npm test
-      env: 
-      POSTGRES_HOST: localhost
-      POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} 
-      TEST_DATABASE_URL: postgres://postgres:postgres@127.0.0.1:${{ job.services.postgres.ports[5432] }}/test_db
+      - uses: actions/checkout@v1
+      - name: Setup node 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: backend test 
+        run: npm run test
+        env:
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} # get randomly assigned published port
+          TEST_DATABASE_URL: postgres://postgres:postgres@127.0.0.1:${{ job.services.postgres.ports[5432] }}/test_db

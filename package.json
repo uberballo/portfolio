@@ -10,7 +10,7 @@
     "create-test-db": "NODE_ENV=test sequelize db:create",
     "migrate-test-db": "NODE_ENV=test sequelize db:migrate",
     "seed-test-db": "NODE_ENV=test sequelize db:seed:all",
-    "test-db": "NODE_ENV=test sequelize db:drop && npm run create-test-db && npm run migrate-test-db && npm run seed-test-db"
+    "test-db": "NODE_ENV=test sequelize db:drop && npm run create-test-db && npm run migrate-test-db && npm run seed-test-db && npm test"
   },
   "keywords": [],
   "author": "",
