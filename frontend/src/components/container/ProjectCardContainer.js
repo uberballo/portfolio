@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProjectCard from '../presentational/ProjectCard';
 import SingleProjectContainer from '../container/SingleProjectContainer';
 import ProjectService from '../../sevices/projectService';
+import modifyLength from '../../helpers/modifyLength'
 
 const CardContainer = () => {
   const [projects, setProjects] = useState();
@@ -17,19 +18,10 @@ const CardContainer = () => {
     getProjects();
   }, []);
 
-  const modifyDescriptionLenght = project => {
-    const description = project.description;
-    const newDescription =
-      description.length >  MAX_LENGTH
-      ? description.substring(0, MAX_LENGTH) + '...'
-      : description;
-    const newProject = { ...project, description: newDescription};
-    return newProject;
-  };
 
   const cards = () =>
     projects.map(p => (
-      <ProjectCard data={modifyDescriptionLenght(p)} setCurrentProject={setCurrentProject} key={p.id} />
+      <ProjectCard data={modifyLength(p,'description')} setCurrentProject={setCurrentProject} key={p.id} />
     ));
 
   return (

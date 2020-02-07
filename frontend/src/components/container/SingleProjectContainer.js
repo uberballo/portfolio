@@ -14,7 +14,7 @@ const SingleProjectContainer = ({ project }) => {
     getCodes();
   }, []);
 
-  const cards = () => codes.map(c => <CodeCardContaier code={c}/>);
+  const cards = () => codes.map(c => <CodeCardContaier code={c} key={c.id}/>);
 
   return (
     <div >
