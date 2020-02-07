@@ -8,8 +8,8 @@
     "watch": "NODE_ENV=development nodemon index.js",
     "reset-db": "sequelize db:drop & sequelize db:create & sequelize db:migrate & sequelize db:seed:all",
     "create-test-db": "NODE_ENV=test sequelize db:create",
-    "migrate-test-db" :"NODE_ENV=test sequelize db:migrate",
-    "seed-test-db" :"NODE_ENV=test sequelize db:seed:all",
+    "migrate-test-db": "NODE_ENV=test sequelize db:migrate",
+    "seed-test-db": "NODE_ENV=test sequelize db:seed:all",
     "test-db": "NODE_ENV=test sequelize db:drop && npm run create-test-db && npm run migrate-test-db && npm run seed-test-db"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jest": "^24.9.0",
     "pg": "^7.18.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.3",
@@ -26,7 +27,6 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.0",
-    "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
   }
