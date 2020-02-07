@@ -4,6 +4,9 @@ const supertest = require('supertest');
 
 const api = supertest(app);
 
+afterAll(async () =>{
+    await db.sequelize.close()
+})
 
 describe('test', () => {
   it('test', async () => {
