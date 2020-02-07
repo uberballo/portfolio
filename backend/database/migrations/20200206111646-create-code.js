@@ -17,7 +17,7 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      code: {
+      content: {
         type: Sequelize.STRING
       },
       createdAt: {

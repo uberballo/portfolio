@@ -13,5 +13,7 @@
 |6.5| 2 | Github actions|  
 |6.5| 1 | Refactored the database, Project has many codes|  
 |6.5| 0.5 | Find codes with ProjectId |  
+|6.5| 0.5 | Added project cards|  
+|6.5| 1 | Refactored db models, modify UI|  
 
 

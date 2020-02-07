@@ -7,7 +7,7 @@ module.exports = {
         title: 'Java koodia',
         language: 'Java',
         description: 'tulostetaan asioita',
-        code:'system.out.println(1+1);',
+        content:'system.out.println(1+1);',
         createdAt: new Date(),
         updatedAt: new Date()
       },{
@@ -15,14 +15,14 @@ module.exports = {
         title: 'Python koodia', 
         language: 'Python',
         description: 'Tässä lasketaan yhteen',
-        code:'console.log(1+1)',
+        content:'console.log(1+1)',
         createdAt: new Date(),
         updatedAt: new Date()
       },{
         projectId: 2,
         title: 'Python koodia main', 
         language: 'Python',
-        code:'Python def main()asd',
+        content:'Python def main()asd',
         createdAt: new Date(),
         updatedAt: new Date()
       }

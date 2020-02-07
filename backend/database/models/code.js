@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     language: DataTypes.STRING,
     description: DataTypes.STRING,
-    code: DataTypes.STRING,
+    content: DataTypes.STRING,
     projectId: DataTypes.INTEGER
   },
    {});

@@ -2,6 +2,7 @@
 import React from 'react';
 
 const ProjectCard = ({ data,setCurrentProject}) => {
+
   return (
     <div className='card mt-4 ml-4 mr-4 text-center shadow-sm'>
       <div className='card-header'>

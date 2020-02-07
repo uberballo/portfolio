@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SingleProject from '../presentational/SingleProject';
 import CodeService from '../../sevices/codeService';
-import CodeCard from '../presentational/CodeCard'
+import CodeCardContaier from '../container/CodeCardContainer'
 
 const SingleProjectContainer = ({ project }) => {
   const [codes, setCodes] = useState();
@@ -14,7 +14,7 @@ const SingleProjectContainer = ({ project }) => {
     getCodes();
   }, []);
 
-  const cards = () => codes.map(c => <CodeCard data={c} key={c.id} />);
+  const cards = () => codes.map(c => <CodeCardContaier code={c}/>);
 
   return (
     <div >
