@@ -24,7 +24,8 @@ jobs:
         with:
           node-version: 12.x
       - run: npm ci
-      - run: npm run test
+        working-directory: ./backend
+      - run: npm run test-db
         working-directory: ./backend
         env:
           POSTGRES_HOST: localhost
