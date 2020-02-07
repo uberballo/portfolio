@@ -17,6 +17,6 @@ describe('test', () => {
 
       const body = response.body.codes
       console.log(response.body)
-      expect(body).toHaveLength(2)
+      expect(body).toHaveLength(3)
   });
 });

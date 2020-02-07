@@ -10,4 +10,12 @@ const getCode = async () =>{
     }
 }
 
-export default {getCode}
+const getCodeWithId = async (id) =>{
+    try{
+        const res = await axios.get(baseUrl+`/${id}`)
+        return res.data.codes
+    } catch (error){
+        console.log(error)
+    }
+}
+export default {getCode, getCodeWithId}

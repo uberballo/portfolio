@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from '../presentational/Header';
 import About from '../presentational/About';
-import CardContainer from './CardContainer'
+import ProjectCardContainer from './ProjectCardContainer'
 import LoginContainer from './LoginContainer'
 
 const HomePageContainer = () => {
@@ -10,7 +10,7 @@ const HomePageContainer = () => {
     <div className='HomePageContainer'>
       <Router>
         <Header />
-          <Route exact path='/' render={() => <CardContainer />} />
+          <Route exact path='/' render={() => <ProjectCardContainer />} />
           <Route path='/about' render={() => <About />} />
           <Route path='/admin' render={() => <LoginContainer/>} />
 

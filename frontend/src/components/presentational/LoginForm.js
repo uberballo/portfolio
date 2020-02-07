@@ -1,29 +1,7 @@
-import React, {useState} from 'react'
-import LoginService from '../../sevices/logInService'
+import React from 'react'
 
-const useField = type => {
-  const [value, setValue] = useState('')
+const LoginForm = ({username, password, handleSubmit}) =>{
 
-  const onChange = event => {
-    setValue(event.target.value)
-  }
-  return {
-    type,
-    value,
-    onChange
-  }
-}
-
-
-const LoginForm = ({setLoggedIn}) =>{
-    const username = useField('text')
-    const password = useField('password')
-
-const handleSubmit= async (e) =>{
-  e.preventDefault()
-  const response = await LoginService.logIn(username.value, password.value)
-  setLoggedIn(response && response.loggedIn)
-}
 
 
     return (

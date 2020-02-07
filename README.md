@@ -10,7 +10,7 @@ Portfolio site where you can showcase your code. Retrieves projects from Github 
 * Secure logging in
 * Possibility to add code  
 * Fetch data from Github  
-* Ci/Cd
+* Cd
 * Tests
 * Hosting 
 
