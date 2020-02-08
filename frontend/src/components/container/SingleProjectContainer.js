@@ -18,7 +18,7 @@ const SingleProjectContainer = ({ project }) => {
 
   return (
     <div >
-      <SingleProject data={project} />
+      <SingleProject project={project} />
       <div className='container'>
         <div className='row '>
           {codes ? cards() : null}

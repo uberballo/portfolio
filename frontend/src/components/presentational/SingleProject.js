@@ -1,12 +1,13 @@
 import React from 'react'
 
-const SingleProject = ({data}) =>{
+const SingleProject = ({project}) =>{
     return(
 
         <div className="jumbotron">
             <div className="container mt-4">
-                <h2 className="display-3 text-center">{data.title}</h2>
-                <p>{data.description}</p>
+                <h2 className="display-3 text-center">{project.title}</h2>
+                <a href={project.url}>{project.url}</a>
+                <p>{project.description}</p>
             </div>
         </div>
     )
