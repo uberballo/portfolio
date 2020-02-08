@@ -18,3 +18,4 @@
 |7.2| 0.25 | Added helper function|  
 |8.2| 2 | Added to Heroku, not for personal use|  
 |8.2| 0.5 | Code card UI |  
+|8.2| 1.5 |Added token based log in |  

@@ -24,9 +24,9 @@ const LoginContainer = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log(username.value);
     const response = await LoginService.logIn(username.value, password.value);
-    setLoggedIn(response && response.loggedIn);
+    console.log(response)
+    setLoggedIn(response&& response.token);
   };
 
   return (

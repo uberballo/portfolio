@@ -1,5 +1,8 @@
 
 const modifyLength = (object, field, max_length = 150) =>{
+  if (!object[field]){
+    return object
+  }
     const toModify = object[field]
     const newValue =
       toModify.length > max_length 

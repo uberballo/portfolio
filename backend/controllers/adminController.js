@@ -1,20 +1,27 @@
-require('dotenv').config()
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
-const logInAdmin = (req,res) =>{
-    const body = req.body
+const logInAdmin = (req, res) => {
+  const body = req.body;
 
-    if (body.username === process.env.ADMIN_USERNAME &&
-        body.password === process.env.ADMIN_PASSWORD){
-            return res.status(200).json({
-                loggedIn:true
-            })
-        }else{
-            return res.status(401).json({
-                loggedIn:false
-            })
-        }
-}
+  if (
+    body.username === process.env.ADMIN_USERNAME &&
+    body.password === process.env.ADMIN_PASSWORD
+  ) {
+    const adminToken = {
+      admin: true
+    };
 
-module.exports= {
-    logInAdmin
-}
+    const token = jwt.sign(adminToken, process.env.SECRET)
+
+    return res.status(200).send({ token});
+  } else {
+    return res.status(401).json({
+        error: 'invalid username or password'
+    });
+  }
+};
+
+module.exports = {
+  logInAdmin
+};

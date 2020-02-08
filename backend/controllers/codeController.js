@@ -1,8 +1,18 @@
 const models = require('../database/models')
+const getTokenFrom = require('../helper/tokenExtractor')
+const jwt = require('jsonwebtoken')
+
+
+
 
 const CreateCode = async(req, res) =>{
+    const token = getTokenFrom(req)
+
     try{
-        console.log(req.body)
+        const decodedToken = jwt.verify(token, process.env.SECRET)
+        if (!token || !decodedToken.admin){
+            return res.status(401).json({error: 'token missing or invalid'})
+        }
         const code = await models.Code.create(req.body)
         return res.status(201).json({
             code

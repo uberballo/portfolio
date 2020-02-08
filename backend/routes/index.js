@@ -10,6 +10,7 @@ router.post('/code',codeController.CreateCode)
 router.get('/code',codeController.GetAllCodes)
 router.get('/code/:id',codeController.getCodesWithId)
 router.get('/project',projectController.getAllProjects)
+router.post('/project',projectController.createProject)
 router.get('/project/codes',projectController.getAllProjectsWithCodes)
 router.post('/login',adminController.logInAdmin)
 
