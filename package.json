@@ -6,6 +6,7 @@
   "scripts": {
     "test": "NOVE_ENV=test jest",
     "watch": "NODE_ENV=development nodemon backend/",
+    "start": "node backend/",
     "build": "cd frontend/ && npm install && npm run build",
     "reset-db": "sequelize db:drop & sequelize db:create & sequelize db:migrate & sequelize db:seed:all",
     "create-test-db": "NODE_ENV=test sequelize db:create",
