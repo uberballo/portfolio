@@ -17,3 +17,4 @@
 |7.2| Refactored db models, modify UI|  
 |7.2| 0.25 | Added helper function|  
 |8.2| 2 | Added to Heroku, not for personal use|  
+|8.2| 0.5 | Code card UI |  
