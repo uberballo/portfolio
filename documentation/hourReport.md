@@ -22,3 +22,5 @@
 |8.2| 0.25 |Tried to add 'push heroku' to GH actions|  
 |8.2| 0.25 |Tried to get Docker working|  
 |9.2| 1.5 |Add token to frontend and admin can add new project|  
+|9.2| 1 | UI fixes, Routing|  
+|9.2| 0.25 |Tried to get routing work|  

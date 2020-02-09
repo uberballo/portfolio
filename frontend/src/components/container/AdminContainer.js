@@ -2,7 +2,7 @@ import React from 'react';
 import NewProjectContainer from '../container/NewProjectContainer';
 import { Route, Link, Redirect } from 'react-router-dom';
 
-const AdminContainer = ({loggedIn}) => {
+const AdminContainer = () => {
   return (
     <div>
       <p>tere admin</p>
