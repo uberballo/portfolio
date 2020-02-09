@@ -21,3 +21,4 @@
 |8.2| 1.5 |Added token based log in |  
 |8.2| 0.25 |Tried to add 'push heroku' to GH actions|  
 |8.2| 0.25 |Tried to get Docker working|  
+|9.2| 1.5 |Add token to frontend and admin can add new project|  
