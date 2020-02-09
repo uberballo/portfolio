@@ -14,7 +14,10 @@ const logInAdmin = (req, res) => {
 
     const token = jwt.sign(adminToken, process.env.SECRET)
 
-    return res.status(200).send({ token});
+    return res.status(200).send({
+      token,
+      admin: true
+    });
   } else {
     return res.status(401).json({
         error: 'invalid username or password'

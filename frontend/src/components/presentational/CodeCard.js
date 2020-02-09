@@ -12,9 +12,9 @@ const CodeCard = ({ code,setCurrentCode }) => {
         <p className='card-text'>{code.description}</p>
         <p className='card-text'>{code.content}</p>
       </div>
-      <a onClick={() => setCurrentCode(code)} className='btn btn-primary'>
+      <button onClick={() => setCurrentCode(code)} className='btn btn-primary'>
         Choose
-      </a>
+      </button>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ProjectForm from '../presentational/ProjectForm';
 import useField from '../../helpers/useField';
 import Adminservice from '../../sevices/adminService';
@@ -18,7 +18,7 @@ const NewProjectContainer = () => {
       description: description.value
     };
     const response = await Adminservice.createProject(newProject);
-    console.log(response)
+    console.log(response);
   };
 
   return (

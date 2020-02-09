@@ -7,7 +7,6 @@ import modifyLength from '../../helpers/modifyLength'
 const CardContainer = () => {
   const [projects, setProjects] = useState();
   const [currentProject, setCurrentProject] = useState();
-  const MAX_LENGTH = 150;
 
   useEffect(() => {
     const getProjects = async () => {

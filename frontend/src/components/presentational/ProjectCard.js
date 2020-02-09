@@ -13,9 +13,9 @@ const ProjectCard = ({ data,setCurrentProject}) => {
         <h6 className='card-subtitle mb-2'>{data.url}</h6>
         <p className='card-text'>{data.description}</p>
       </div>
-      <a onClick={() => setCurrentProject(data)} className='btn btn-primary'>
+      <button onClick={() => setCurrentProject(data)} className='btn btn-primary'>
         Choose
-      </a>
+      </button>
     </div>
   );
 };

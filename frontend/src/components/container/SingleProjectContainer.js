@@ -12,7 +12,7 @@ const SingleProjectContainer = ({ project }) => {
       setCodes(response);
     };
     getCodes();
-  }, []);
+  }, [project]);
 
   const cards = () => codes.map(c => <CodeCardContaier code={c} key={c.id}/>);
 
