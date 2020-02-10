@@ -1,7 +1,8 @@
-describe('The hope page', function(){
+describe('The home page', function(){
     
     it('successfully loads', function(){
         cy.visit('/')
+        cy.contains('python laskin');
         cy.visit('/about')
     }),
 
@@ -10,7 +11,9 @@ describe('The hope page', function(){
         cy.contains('div','java peli').parent().within(($div) =>{
             cy.get('button').click()
         })
-        cy.contains('Java koodia')
+        cy.contains('div','Java koodia').parent().within(($div) =>{
+            cy.get('button').click()
+        })
      })
     
 })
