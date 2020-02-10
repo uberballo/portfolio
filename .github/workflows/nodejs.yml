@@ -37,7 +37,10 @@ jobs:
 
       - name: E2E testing
         run: npm run test:cy
-        env:
+        env:          
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD}}     
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME}}
+          SECRET: ${{ secrets.SECRET_WORD}}
           POSTGRES_HOST: localhost
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} 
           TEST_DATABASE_URL: postgres://postgres:postgres@127.0.0.1:${{ job.services.postgres.ports[5432] }}/test_db
