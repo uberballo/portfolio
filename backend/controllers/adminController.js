@@ -3,9 +3,6 @@ require('dotenv').config();
 
 const logInAdmin = (req, res) => {
   const body = req.body;
-  console.log(body)
-  console.log(process.env.ADMIN_USERNAME)
-  console.log(process.env.ADMIN_PASSWORD)
   if (
     body.username === process.env.ADMIN_USERNAME &&
     body.password === process.env.ADMIN_PASSWORD

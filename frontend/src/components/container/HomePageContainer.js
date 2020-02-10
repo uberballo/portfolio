@@ -13,7 +13,6 @@ const HomePageContainer = () => {
           <Route exact path='/' render={() => <ProjectCardContainer />} />
           <Route path='/about' render={() => <About />} />
           <Route path='/admin' render={() => <LoginContainer/>} />
-
         </Router>
     </div>
   );

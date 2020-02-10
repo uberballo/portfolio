@@ -5,7 +5,6 @@ import HomePageContainer from './components/container/HomePageContainer';
 import './App.css';
 
 function App() {
-  codeService.getCode();
   return (
     <div className='App'>
       <HomePageContainer/>

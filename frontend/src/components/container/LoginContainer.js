@@ -5,13 +5,6 @@ import LoginService from '../../sevices/logInService';
 import useField from '../../helpers/useField';
 import AdminService from '../../sevices/adminService';
 import adminService from '../../sevices/adminService';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
-} from 'react-router-dom';
 
 const LoginContainer = () => {
   const username = useField('text');
@@ -32,7 +25,6 @@ const LoginContainer = () => {
     e.preventDefault();
     const response = await LoginService.logIn(username.value, password.value);
     if (response && response.token) {
-      console.log(response);
       setLoggedIn(true);
       AdminService.setToken(response.token);
       window.localStorage.setItem('admin', JSON.stringify(response));
