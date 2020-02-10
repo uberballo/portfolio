@@ -27,3 +27,4 @@
 |10.2| 1.25 |E2E tests and use them in GH actions| 
 |10.2| 1 | E2E test |  
 |10.2| 1 | More unit tests|  
+|10.2| 1 | E2E code coverage |  
