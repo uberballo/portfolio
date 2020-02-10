@@ -3,13 +3,14 @@ name: Node.js CI
 on: [push]
 
 jobs:
-  vm-job:
+  build:
     env:
       POSTGRES_HOST: localhost
       POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} 
       TEST_DATABASE_URL: postgres://postgres:postgres@127.0.0.1:${{ job.services.postgres.ports[5432] }}/test_db
       ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD}}
       ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME}}
+  vm-job:
 
     runs-on: ubuntu-latest
 
