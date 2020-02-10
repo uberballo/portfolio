@@ -27,9 +27,9 @@ jobs:
       - run: npm ci
       - run: cd frontend && npm ci
       - run: npm run test-db
-        env:      
-          ADMIN_PASSWORD: ${{ secrets.ADMIN__PASSWORD}}
-          ADMIN_USERNAME: ${{ secrets.ADMIN__USERNAME}}
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD}}     
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME}}
           SECRET: ${{ secrets.SECRET_WORD}}
           POSTGRES_HOST: localhost
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} 
