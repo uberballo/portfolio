@@ -14,7 +14,7 @@
 |7.2| 1 | Refactored the database, Project has many codes|  
 |7.2| 0.5 | Find codes with ProjectId |  
 |7.2| 0.5 | Added project cards|  
-|7.2| Refactored db models, modify UI|  
+|7.2| 0.5| Refactored db models, modify UI|  
 |7.2| 0.25 | Added helper function|  
 |8.2| 2 | Added to Heroku, not for personal use|  
 |8.2| 0.5 | Code card UI |  
@@ -24,3 +24,4 @@
 |9.2| 1.5 |Add token to frontend and admin can add new project|  
 |9.2| 1 | UI fixes, Routing|  
 |9.2| 0.25 |Tried to get routing work|  
+|10.2| 1.25 |E2E tests and use them in GH actions| 
