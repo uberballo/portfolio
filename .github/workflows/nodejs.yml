@@ -31,4 +31,4 @@ jobs:
           TEST_DATABASE_URL: postgres://postgres:postgres@127.0.0.1:${{ job.services.postgres.ports[5432] }}/test_db
 
       - name: E2E testing
-        run: npm run ci
+        run: npm test:front

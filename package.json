@@ -7,6 +7,7 @@
     "test": "NOVE_ENV=test jest",
     "watch": "NODE_ENV=development nodemon backend/",
     "start": "node backend/",
+    "start:test": "cross-env NODE_ENV=test node backend/",
     "build": "cd frontend/ && npm install && npm run build",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run watch\" \"npm run client\"",
@@ -14,7 +15,11 @@
     "create-test-db": "NODE_ENV=test sequelize db:create",
     "migrate-test-db": "NODE_ENV=test sequelize db:migrate",
     "seed-test-db": "NODE_ENV=test sequelize db:seed:all",
-    "test-db": "NODE_ENV=test sequelize db:drop && npm run create-test-db && npm run migrate-test-db && npm run seed-test-db && npm test"
+    "test-db": "NODE_ENV=test sequelize db:drop && npm run create-test-db && npm run migrate-test-db && npm run seed-test-db && npm test",
+    "test:cy": "start-server-and-test start:test http://localhost:3003/api/ test:front",
+    "test:front": "cd frontend/ && npm run ci"
+
+
   },
   "keywords": [],
   "author": "",
@@ -35,6 +40,7 @@
     "concurrently": "^5.1.0",
     "cross-env": "^7.0.0",
     "nodemon": "^2.0.2",
+    "start-server-and-test": "^1.10.8",
     "supertest": "^4.0.2"
   }
 }
