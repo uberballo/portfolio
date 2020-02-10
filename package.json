@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NOVE_ENV=test jest --coverage",
+    "test:local": "NOVE_ENV=test jest --setupFiles dotenv/config --coverage",
     "watch": "NODE_ENV=development nodemon backend/",
     "start": "node backend/",
     "start:test": "cross-env NODE_ENV=test node backend/",
