@@ -10,12 +10,14 @@ afterAll(async () => {
 
 const projectsWithoutCodes = [
   {
+    id:1,
     title: 'java peli',
     language: 'Java',
     url: 'github.com/NONE',
     description: 'peli mikä on tehty javalla'
   },
   {
+    id:2,
     title: 'python laskin',
     language: 'Python',
     url: 'github.com/MISSAAN',

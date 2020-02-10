@@ -17,8 +17,9 @@ const getAllProjects = async (req, res) => {
 
 const getAllProjectsWithCodes = async (req, res) => {
   try {
-    const projects = await models.Project.findAll()
-    
+    const projects = await models.Project.findAll({
+      include: 'codes'
+    });
     return res.status(200).json({
       projects
     });
