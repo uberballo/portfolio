@@ -1,3 +1,4 @@
+const db = require('../database/models/index');
 const app = require('../app');
 const supertest = require('supertest');
 
@@ -12,6 +13,9 @@ const AdminWithCorrectPassword = {
   username: 'admin',
   password: 'password'
 };
+afterAll(async () => {
+  await db.sequelize.close();
+});
 
 describe('Admincontroller test', () => {
   it("Can't log in with incorrect password", async () => {

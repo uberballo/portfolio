@@ -41,7 +41,6 @@ describe('projectController test', () => {
       .expect(200);
 
     const body = response.body.projects;
-    console.log(body);
     expect(body).toEqual(projectsWithoutCodes);
 
     expect(body[0].codes).toBeUndefined();
