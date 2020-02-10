@@ -34,4 +34,5 @@ describe('Admincontroller test', () => {
     expect(body.admin).toEqual(true);
     expect(body.token).toBeTruthy();
   });
+
 });

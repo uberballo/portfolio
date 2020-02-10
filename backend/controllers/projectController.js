@@ -31,7 +31,7 @@ const getAllProjectsWithCodes = async (req, res) => {
 
 const createProject = async (req, res) =>{
     const token = getTokenFrom(req)
-
+    console.log(token)
     try{
         const decodedToken = jwt.verify(token, process.env.SECRET)
         if (!token || !decodedToken.admin){
