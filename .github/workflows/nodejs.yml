@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: 12.x
       - run: npm ci
+      - run: cd frontend && npm ci
       - run: npm run test-db
         env:
           POSTGRES_HOST: localhost
