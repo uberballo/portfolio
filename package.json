@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NOVE_ENV=test jest",
+    "test": "NOVE_ENV=test jest --coverage",
     "watch": "NODE_ENV=development nodemon backend/",
     "start": "node backend/",
     "start:test": "cross-env NODE_ENV=test node backend/",
