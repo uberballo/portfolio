@@ -26,3 +26,4 @@
 |9.2| 0.25 |Tried to get routing work|  
 |10.2| 1.25 |E2E tests and use them in GH actions| 
 |10.2| 1 | E2E test |  
+|10.2| 1 | More unit tests|  
