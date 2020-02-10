@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 const getAllProjects = async (req, res) => {
   try {
     const projects = await models.Project.findAll({
-      attributes: ['title','language','url','description']
+      attributes: ['id','title','language','url','description']
     });
     return res.status(200).json({
       projects
@@ -17,10 +17,8 @@ const getAllProjects = async (req, res) => {
 
 const getAllProjectsWithCodes = async (req, res) => {
   try {
-    const projects = await models.Project.findAll({
-      attributes: ['title','language','url','description'],
-      include: 'codes'
-    });
+    const projects = await models.Project.findAll()
+    
     return res.status(200).json({
       projects
     });

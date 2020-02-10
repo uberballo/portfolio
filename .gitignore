@@ -24,3 +24,4 @@ yarn-error.log*
 
 .env
 graphqlQuery.txt
+.nyc_output/
