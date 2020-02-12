@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     language: DataTypes.STRING,
     url: DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.TEXT,
   }, {});
   Project.associate = function(models) {
     Project.hasMany(models.Code,{

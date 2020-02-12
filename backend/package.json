@@ -12,7 +12,7 @@
     "build": "cd ../frontend/ && npm install && npm run build",
     "client": "npm start --prefix ../frontend",
     "dev": " concurrently \"npm run watch\" \"npm run client\"",
-    "reset-db": "sequelize db:drop & sequelize db:create & sequelize db:migrate & sequelize db:seed:all",
+    "reset-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "create-test-db": "NODE_ENV=test sequelize db:create",
     "migrate-test-db": "NODE_ENV=test sequelize db:migrate",
     "seed-test-db": "NODE_ENV=test sequelize db:seed:all",

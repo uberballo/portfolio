@@ -3,8 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   const Code = sequelize.define('Code', {
     title: DataTypes.STRING,
     language: DataTypes.STRING,
-    description: DataTypes.STRING,
-    content: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    content: DataTypes.TEXT,
     projectId: DataTypes.INTEGER
   },
    {});
