@@ -10,7 +10,6 @@ const NewProjectContainer = () => {
   const description = useField('text');
 
   const handleSubmit = async e => {
-    e.preventDefault();
     const newProject = {
       title: title.value,
       language: language.value,
