@@ -1,0 +1,33 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5431:5432'
+    restart: always
+  web-app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    ports:
+      - '3000:3000'
+    restart: on-failure
+    container_name: web-app
+  to-do-api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - '3003:3003'
+    restart: on-failure
+    container_name: api
+    volumes:
+      - /app/node_modules 
+      - ./backend:/app 
+    environment:
+      - SECRET=adminSalasana
+      - ADMIN_PASSWORD=password
+      - ADMIN_USERNAME=admin
