@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: npm ci
+      - run: cd backend && npm ci
       - run: cd frontend && npm ci
       - run: npm run test-db
         env:
