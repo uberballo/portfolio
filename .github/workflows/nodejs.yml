@@ -27,6 +27,7 @@ jobs:
       - run: cd backend && npm ci
       - run: cd frontend && npm ci
       - run: npm run test-db
+        working-directory: ./backend
         env:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD}}     
           ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME}}
@@ -36,6 +37,7 @@ jobs:
           TEST_DATABASE_URL: postgres://postgres:postgres@127.0.0.1:${{ job.services.postgres.ports[5432] }}/test_db
 
       - name: E2E testing
+        working-directory: ./backend
         run: npm run test:cy
         env:          
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD}}     
