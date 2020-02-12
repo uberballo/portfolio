@@ -19,13 +19,12 @@
     "test-db": "NODE_ENV=test sequelize db:drop && npm run create-test-db && npm run migrate-test-db && npm run seed-test-db && npm test",
     "test:cy": "start-server-and-test start:test http://localhost:3003/api/code test:front",
     "test:front": "cd frontend/ && npm run ci"
-
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sentry/node": "^5.12.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
