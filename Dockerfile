@@ -1,13 +1,10 @@
-from node:8.7.0-alpine
+FROM node:12-alpine
 
-RUN mkdir -p /srv/app/portfolio
-WORKDIR /srv/app/portfolio
+WORKDIR /app
 
-COPY package.json /srv/app/portfolio
-COPY package-lock.json /srv/app/portfolio
-
+COPY package.json .
 RUN npm install
+COPY . .
 
-
-CMD [ "npm", "start" ]
-
+EXPOSE 3003
+CMD ["npm", "run", "watch"]

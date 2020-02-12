@@ -6,11 +6,11 @@
   "scripts": {
     "test": "NOVE_ENV=test jest --coverage",
     "test:local": "NOVE_ENV=test jest --setupFiles dotenv/config --coverage",
-    "watch": "NODE_ENV=development nodemon src/",
-    "start": "node src/",
-    "start:test": "cross-env NODE_ENV=test node src/",
-    "build": "cd ../frontend/ && npm install && npm run build",
-    "client": "npm start --prefix ../frontend",
+    "watch": "NODE_ENV=development nodemon backend/",
+    "start": "node backend/",
+    "start:test": "cross-env NODE_ENV=test node backend/",
+    "build": "cd frontend/ && npm install && npm run build",
+    "client": "npm start --prefix /frontend",
     "dev": " concurrently \"npm run watch\" \"npm run client\"",
     "reset-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "create-test-db": "NODE_ENV=test sequelize db:create",
@@ -18,7 +18,7 @@
     "seed-test-db": "NODE_ENV=test sequelize db:seed:all",
     "test-db": "NODE_ENV=test sequelize db:drop && npm run create-test-db && npm run migrate-test-db && npm run seed-test-db && npm test",
     "test:cy": "start-server-and-test start:test http://localhost:3003/api/code test:front",
-    "test:front": "cd ../frontend/ && npm run ci"
+    "test:front": "cd frontend/ && npm run ci"
   },
   "keywords": [],
   "author": "",
