@@ -29,3 +29,4 @@
 |10.2| 1 | More unit tests|  
 |10.2| 1 | E2E code coverage |  
 |10.2| 0.25 |More E2E tests|  
+|11.2| 0.5 |Docker files, small changes|  
